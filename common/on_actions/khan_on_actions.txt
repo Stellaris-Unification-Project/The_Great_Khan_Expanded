@@ -1,0 +1,114 @@
+on_game_start = {
+	events = {
+		khan.300
+	}
+}
+on_single_player_save_game_load = {
+	events = {
+		khan.300
+	}
+}
+
+# # No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		# khan.299
+		marauder.11 # Marauder infighting
+	}
+}
+
+# No scope, like on_game_start
+# on_yearly_pulse_country = {
+# 	events = {
+# 		khan.529
+# 	}
+# }
+
+# on_five_year_pulse_country = {
+# 	events = {
+# 		khan.219 # integrate subject
+# 	}
+# }
+
+# This = subject
+# From = subject's overlord
+on_becoming_subject = {
+	events = {
+		khan.529
+	}
+}
+
+# This = starbase being destroyed
+# From = fleet that destroyed the starbase
+on_starbase_destroyed = {
+	events = {
+		marauder.527 # increase counter
+	}
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		marauder.13 # Marauder infighting aftermath (vanilla commented out)
+	}
+}
+
+# Planet has taken damage from orbital bombardment - Damage is applied daily.
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		marauder.528 # increase counter
+	}
+}
+# Planet has reached 0 pops from orbital bombardment.
+# This = Planet
+# From = Bombarder
+on_planet_zero_pops = {
+	events = {
+		marauder.528 # increase counter
+	}
+}
+
+# Planet has reached 0 pops from collateral damage.
+# This = Planet
+# From = Army owner
+on_planet_zero_pops_ground_combat = {
+	events = {
+		marauder.528 # increase counter
+	}
+}
+
+# This = Ship
+# From = Disabler Ship
+on_ship_disabled = {
+	events = {
+		khan.304
+	}
+}
+# This = Ship
+on_ship_enabled = {
+	events = {
+		khan.305
+	}
+}
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		khan.901
+	}
+}
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		marauder.609
+	}
+}
